@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head lang="en">
+    <title>理财介绍</title>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link type="text/css" rel="stylesheet" href="./font/iconfont.css"/>
+    <link type="text/css" rel="stylesheet" href="./style/index.css"/>
+</head>
+<body>
+<div class="cont">
+    <header class="header">
+        <p>
+             <span>
+                理财产品
+            </span>
+            <i class="icon" ng-click="mark()">&#xe699;</i>
+        </p>
+        <ul class="selec" id="sel">
+            <li class="on"><a href="#/info" ng-click="goto(0)">债全产品</a></li>
+            <li ng-click="goto(1)"><a href="#/list">优选基金</a></li>
+        </ul>
+    </header>
+    <section class="section">
+        <div class="option">
+            <label class="btns">
+                <input type="radio" name="btn"/>
+                <div class="toggles">
+                </div>
+            </label>
+            <span>全部</span>
+            <label class="btns">
+                <input type="radio" name="btn"/>
+                <div class="toggles">
+                </div>
+            </label>
+            <span>押租宝</span>
+            <label class="btns">
+                <input type="radio" name="btn"/>
+                <div class="toggles">
+                </div>
+            </label>
+            <span>流水宝</span>
+            <label class="btns">
+                <input type="radio" name="btn"/>
+                <div class="toggles">
+                </div>
+            </label>
+            <span>黄金宝</span>
+        </div>
+        <div ng-view="">
+        </div>
+    </section>
+    <footer class="footer">
+        <dl>
+            <dt>
+                <i class="icon">&#xe91b;</i>
+            </dt>
+            <dd>
+                首页
+            </dd>
+        </dl>
+        <dl class="checked">
+            <dt>
+                <i class="icon">&#xe947;</i>
+            </dt>
+            <dd>
+                理财产品
+            </dd>
+        </dl>
+
+        <dl>
+            <dt>
+                <i class="icon">&#xe90e;</i>
+            </dt>
+            <dd>
+                我的账户
+            </dd>
+        </dl>
+
+        <dl>
+            <dt>
+                <i class="icon">...</i>
+            </dt>
+            <dd>
+                更多
+            </dd>
+        </dl>
+    </footer>
+</div>
+<script type="application/javascript" src="./js/angular.min.js"></script>
+<script type="application/javascript" src="./js/angular-route.min.js"></script>
+<script type="application/javascript" src="./js/app.js"></script>
+
+</body>
+</html>
